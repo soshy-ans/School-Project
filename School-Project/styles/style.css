@@ -4,21 +4,26 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.3rem;
-}
-
-img {
-    max-width: 100%;
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
     background: #ffffeb;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container1 {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -34,15 +39,48 @@ body {
 
 .col {
     /* these are now flex items */
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
 }
 
 .col+.col {
     margin-left: 30px;
 }
 
+.nav__item+.nav__item {
+    margin-left: 4.5em;
+}
+
 header {
     padding: .5em 0;
+}
+
+.txt1 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin: 0;
+    padding-top: .6rem;
+}
+
+.txt2 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3.4rem;
+    margin: 0;
+    padding: 1.3rem .2rem;
+    letter-spacing: 0.1rem;
+}
+
+.txt3 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 3rem 0;
+    padding: 1rem 4rem 0 .5rem;
 }
 
 .nav {
@@ -50,6 +88,7 @@ header {
     justify-content: space-between;
     max-width: 1100px;
     margin: 0 auto;
+    padding-top: .7rem;
 }
 
 .nav__list {
@@ -69,10 +108,6 @@ header {
     font-size: 1.6rem;
     text-decoration: none;
     color: black;
-}
-
-.nav__item+.nav__item {
-    margin-left: 3em;
 }
 
 .nav__link {
@@ -103,11 +138,11 @@ header {
 }
 
 .hero-1 {
+    justify-content: space-between;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
+    margin-top: 7rem;
     padding: 0;
+    max-width: 100%;
 }
 
 .hero__text {
@@ -117,62 +152,106 @@ header {
     margin: 0;
 }
 
-h4 {
-    font-family: 'Playfair Display', serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin: 0;
-    padding-top: .6rem;
-}
-
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 3.3rem;
-    margin: 0;
-    padding: 1.3rem .2rem;
-    letter-spacing: 0.1rem;
-}
-
-p {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin: 0 0 3rem 0;
-    padding: 1rem 0 0 .5rem;
-}
-
 .hero__img {
     width: 36%;
     margin: 0;
     padding: 0;
 }
 
-.contact-me {
+[class|=btn-1] {
     padding: .9rem 1.6rem;
     background: black;
     border: none;
+    font-family: 'Playfair Display', serif;
     text-decoration: none;
     font-weight: 600;
     color: white;
     margin: 0;
-    font-family: 'Playfair Display', serif;
+    box-sizing: border-box;
     font-size: 1.3rem;
 }
 
-.contact-me1 {
-    padding: .9rem 1.6rem;
-    background: #ffffeb;
-    box-sizing: border-box;
+.btn-1-2 {
+    background: #ffffeb00;
     border: solid 2px black;
-    text-decoration: none;
     color: black;
-    font-weight: 600;
+    margin-left: 1.5rem;
+}
+
+.hero__text a:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
+    transition: all ease-in-out .1s;
+}
+
+.arrow-1 {
+    max-width: 2rem;
+    padding: 2rem 0 0 0;
+    margin: 0 auto;
+}
+
+.arrow_1 {
+    text-decoration: none;
+    opacity: .6;
+    color: #000;
+}
+
+.hero-2 {
+    max-width: 100%;
+    margin: 9.6rem 0 2rem 0;
+    /*7.5*/
+    padding: 0;
+    justify-content: space-between;
+    display: flex;
+}
+
+.section__title {
+    padding: 0 0 0 1.2rem;
     margin: 0;
+    font-size: 2.6rem;
+    font-weight: 700;
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    margin-left: 1rem;
+    font-style: normal;
+}
+
+.section__description {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    margin: 0 0 3rem 0;
+    padding: 1.7rem 0 0 1.7rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.022em;
+}
+
+.table {
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    line-height: 2.2em;
+    padding: 1rem 1rem 1rem 3rem;
+    margin-bottom: 1rem;
+}
+
+.td-2 {
+    padding: 0 4rem;
+}
+
+.btn-2 {
+    background-color: black;
+    text-align: center;
+    padding: 1rem;
+    max-width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.btn-2__link {
+    text-decoration: none;
+    color: #ffffeb;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
